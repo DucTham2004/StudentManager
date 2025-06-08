@@ -28,12 +28,10 @@ class UpdateActivity : AppCompatActivity() {
         val position = intent.getIntExtra("position",0)
 
         val editName = findViewById<EditText>(R.id.editTextUpdateName)
-        val editMSSV = findViewById<EditText>(R.id.editTextUpdateMSSV)
         val editEmail = findViewById<EditText>(R.id.editTextUpdateEmailAddress)
         val editPhoneNumber = findViewById<EditText>(R.id.editTextUpdatePhone)
 
         editName.setText(oldName)
-        editMSSV.setText(oldMSSV)
         editEmail.setText(oldEmail)
         editPhoneNumber.setText(oldPhoneNumber)
 
@@ -44,7 +42,6 @@ class UpdateActivity : AppCompatActivity() {
             val resultIntent = Intent().apply {
                 putExtra("position", position)
                 putExtra("studentUpdateName", editName.text.toString())
-                putExtra("studentUpdateMSSV", editMSSV.text.toString())
                 putExtra("studentUpdateEmail", editEmail.text.toString())
                 putExtra("studentUpdatePhoneNumber", editPhoneNumber.text.toString())
             }
